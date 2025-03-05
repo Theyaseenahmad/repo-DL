@@ -23,7 +23,7 @@ const DashboardRightBox = () => {
             <div className='flex md:flex-col md:gap-4 md:items-start justify-between p-2 items-center px-4'>
                 <p className='md:font-light md:text-gray-300 md:text-sm'>Today you makes 12 Activity</p>
 
-                <Button className='bg-red-500'>See all Activity</Button>
+                <Button className='bg-red-500 hover:bg-red-800'>See all Activity</Button>
             </div>
         </div>
 
