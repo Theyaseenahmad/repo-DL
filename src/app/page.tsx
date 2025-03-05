@@ -1,6 +1,6 @@
-import DashboardMiddleBox from "@/components/manual/DashboardMiddleBox";
-import DashboardRightBox from "@/components/manual/DashboardRightBox";
-import Navbar from "@/components/manual/Navbar";
+import DashboardMiddleBox from "@/components/manual/main/DashboardMiddleBox";
+import DashboardRightBox from "@/components/manual/main/DashboardRightBox";
+import Navbar from "@/components/manual/navbar/Navbar";
 
 import { Separator } from "@/components/ui/separator";
 import { SidebarInset, SidebarTrigger } from "@/components/ui/sidebar";

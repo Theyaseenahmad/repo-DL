@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Badge } from '../ui/badge'
+import { Badge } from '../../ui/badge'
 import Image from 'next/image'
 import { MediumBoxtype } from './DashboardMiddleBox'
 
@@ -18,7 +18,7 @@ const MediumBox = ({box}:MediumBoxtype) => {
     </div>
     <div className='w-[40%] h-full flex flex-col items-center justify-center p-2'>
         <div className=' rounded-lg overflow-hidden'>
-            <Image alt='graph' src={'/g1.svg'} width={200} height={200}></Image>
+            <Image alt='graph' src={box.graph} width={200} height={200}></Image>
         </div>
         <Badge className='rounded-md bg-orange-100 text-black' variant="default">{box.percent}</Badge>
         

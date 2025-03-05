@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { useSidebar } from '../ui/sidebar';
+import { useSidebar } from '../../ui/sidebar';
 
 import { useIsMobile } from "@/hooks/use-mobile";
 

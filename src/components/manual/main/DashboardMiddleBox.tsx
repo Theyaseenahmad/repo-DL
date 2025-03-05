@@ -18,7 +18,8 @@ export type MediumBoxtype = {
   number:string,
   men:string,
   women:string,
-  percent:string
+  percent:string,
+  graph:string
 }}
 const DashboardMiddleBox = () => {
 
@@ -53,14 +54,16 @@ font:"text-blue-600"
       number:"216",
       men:"120",
       women:"96",
-      percent:"+2% past Month"
+      percent:"+2% past Month",
+      graph:"/g2.svg"
     },
     {
       text:"Talent Request",
       number:"16",
       men:"6",
       women:"10",
-      percent:"+5% past Month"
+      percent:"+5% past Month",
+      graph:"/g1.svg"
     },
   ]
 

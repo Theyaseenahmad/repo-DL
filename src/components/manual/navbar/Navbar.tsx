@@ -1,13 +1,12 @@
 'use client'
 import React, { useState } from 'react'
-import { Input } from '../ui/input'
+import { Input } from '../../ui/input'
 import { NavDropdown } from './NavDropdown'
 import Image from 'next/image'
 
 const Navbar = () => {
 
   const [openSearch, setopenSearch] = useState(false)
-  console.log(openSearch);
   
   return (
     <>
