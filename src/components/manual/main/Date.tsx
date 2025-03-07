@@ -1,12 +1,17 @@
 "use client"
-import { format } from 'date-fns';
 
 export function CalendarForm() {
 
-   
+    const date = new Date(2025, 0, 20); // Month is 0-based (0 = Jan)
+    const format = date.toLocaleDateString("en-GB", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+    });
+    
+    
 
-    const today = format(new Date(), "dd MMM yyyy");
-    const formattedDate = `Today, ${format(today, "dd MMM yyyy")}`;
+    const formattedDate = `Today, ${format}`;
 
   return (
     <button
