@@ -1,8 +1,29 @@
 import React from 'react'
 import { Button } from '../../ui/button'
 import Schedules from './Schedules'
+import { CalendarForm } from './Date'
 
 const DashboardRightBox = () => {
+
+  const priority = [
+    {
+      text:"Review candidate applications",
+      time:"Today - 11.30 AM"
+    }
+  ]
+
+  const others = [
+    {
+      text:"Interview with candidates",
+      time:"Today - 10.30 AM"
+    },
+    {
+      text:"Short meeting with product designer from IT Departement",
+      time:"Today - 09.15 AM"
+    },
+  ]
+
+
   return (
     <div className='h-full w-full md:w-full lg:w-[40%] rounded-lg flex flex-col md:flex-row lg:flex-col sm:flex-col p-2 gap-4'>
 
@@ -32,21 +53,24 @@ const DashboardRightBox = () => {
        
                  <div className='w-full flex justify-between items-center p-2 px-4'>
                    <h5 className='font-semi-bold text-xl md:text-lg'>Upcoming Schedule</h5>
-                   <h5>13 Jan, 2030</h5>
+                   <CalendarForm></CalendarForm>
                  </div>
        
                  <div className='h-[70%] w-[90%] mx-auto flex flex-col gap-1'>
 
                   <p className='text-xs text-gray-400 capitalize'>priority</p>
                   <div className='overflow-y-auto gap-2 min-h-[30%]  w-full mx-auto'>
-                 <Schedules></Schedules>
+                    {priority.map((row)=>(
+                      <Schedules key={row.text} row={row}></Schedules>
+                    ))}
+                 
                  </div>
                  <p className='text-xs text-gray-400 capitalize'>Others</p>
 
                  <div className='overflow-y-auto gap-2 h-[50%]  w-full mx-auto'>
-
-                 <Schedules></Schedules>
-                 <Schedules></Schedules>
+                 {others.map((row)=>(
+                      <Schedules key={row.text} row={row}></Schedules>
+                    ))}
                  </div>
                  </div>
          

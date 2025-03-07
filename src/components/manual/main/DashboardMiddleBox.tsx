@@ -2,6 +2,7 @@ import React from 'react'
 import SmallBox from './SmallBox'
 import MediumBox from './MediumBox'
 import Announcements from './Announcements'
+import { CalendarForm } from './Date'
 
 export type SmallBoxType = {
   box:{
@@ -67,6 +68,27 @@ font:"text-blue-600"
     },
   ]
 
+    
+  const announcementData = [
+    {
+      text:"Outing schedule for every departement",
+      time:"5 Minutes ago"
+    },
+    {
+      text:"Meeting HR Department",
+      time:"Yesterday 12:30 PM"
+    },
+    {
+      text:"IT Department need two more talents for UI/UX Designer position",
+      time:"Yesterday 9:15 Am"
+    },
+    
+  ]
+  console.log(announcementData);
+  
+
+
+
 
   return (
     <div className="flex flex-1 flex-col gap-4  p-4 pt-0 lg:w-[60%] xl:h-screen  text-[#161E54] ">
@@ -97,13 +119,15 @@ font:"text-blue-600"
 
           <div className='w-full flex justify-between items-center p-2 px-4  h-[20%]'>
             <h5 className='font-semi-bold text-xl'>Announcement</h5>
-            <h5>13 Jan, 2030</h5>
+            <CalendarForm></CalendarForm>
           </div>
 
           <div className='overflow-y-auto  gap-2 md:h-[60%] lg:h-[70%] h-[65%] w-[90%] mx-auto'>
-        <Announcements></Announcements>
-        <Announcements></Announcements>
-        <Announcements></Announcements>
+            {announcementData.map((row)=>(
+              <Announcements key={row.text} row={row}></Announcements>
+            ))}
+        
+     
           </div>
   
           <div className='text-center absolute bottom-0 w-full p-2 flex justify-center items-center  text-red-400 font-bold border-t-[1px] md:p-2 '><p>See all Announcements</p></div>

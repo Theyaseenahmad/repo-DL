@@ -19,7 +19,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
     <Sidebar className="text-gray-700" collapsible="icon" {...props}>
       <SidebarHeader>
       <div className="h-[5em] w-full flex items-center justify-center ">
-            <h1 className="lg:text-3xl md:text-base font-bold">WeHR</h1>
+            <h1 className="lg:text-3xl md:text-base font-bold p-2 m-2">WeHR</h1>
         </div>
       </SidebarHeader>
       <SidebarContent>
